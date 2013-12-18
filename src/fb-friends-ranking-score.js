@@ -1,11 +1,12 @@
-function creator(o, data, node){
+function creator(o, data, node) {
 	var content = document.createElement(node);
 	content.cellspacing = "3"
 	var cell = document.createTextNode(data);
 	content.appendChild(cell);
 	o.appendChild(content);
 }
-function displayData(arr){
+
+function displayData(arr) {
 	var table = document.createElement('table');
 	var thead = document.createElement('thead');
 	table.appendChild(thead);
@@ -28,7 +29,9 @@ function displayData(arr){
 	document.body.appendChild(table);
 }
 
-id = requireDynamic("Env").user;
+//requireDynamic("Env").user not returning id anymore. So found an alternate
+//kept both incase fb reverts back to previous design
+id = requireDynamic("Env").user || requireDynamic("CurrentUserInitialData")["id"];
 url = "//www.facebook.com/ajax/typeahead/search/facebar/bootstrap/?viewer=" + id + "&__a=1";
 x = new XMLHttpRequest();
 x.onreadystatechange=function(){
