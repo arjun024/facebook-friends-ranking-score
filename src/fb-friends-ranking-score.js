@@ -17,7 +17,7 @@ function displayData(arr) {
 	thead.appendChild(row);
 	var tbody = document.createElement('tbody');
 	table.appendChild(tbody);
-	for(i=0; i < arr.length; i++){console.log(arr[i]);
+	for(i=0; i < arr.length; i++){
 		var type = arr[i].type;
 		var row = document.createElement('tr');
 		creator(row, arr[i]["text"], 'td');
