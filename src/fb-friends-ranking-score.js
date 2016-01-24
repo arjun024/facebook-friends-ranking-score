@@ -32,7 +32,7 @@ function displayData(arr) {
 //need to find user's unique id. Trying each of the below until succeeds.
 //facebook keeps changing their variables and keys
 
-id = requireDynamic("CurrentUserInitialData")["USER_ID"] || requireDynamic("CurrentUserInitialData")["ACCOUNT_ID"] || requireDynamic("Env").user || requireDynamic("CurrentUserInitialData")["id"];
+id = require("CurrentUserInitialData")["USER_ID"] || require("CurrentUserInitialData")["ACCOUNT_ID"] || require("Env").user || require("CurrentUserInitialData")["id"];
 url = "//www.facebook.com/ajax/typeahead/search/facebar/bootstrap/?viewer=" + id + "&__a=1";
 x = new XMLHttpRequest();
 x.onreadystatechange=function(){
