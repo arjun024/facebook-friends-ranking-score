@@ -7,7 +7,7 @@ Find your Facebook Friends Ranking Score http://arjunsreedharan.org/post/6597995
 * Facebook is constantly changes their code; so if the script doesn't work, you could help by contributing.
 
 
-###How To##
+### How To ##
 
 * Go to [this page](http://code.arjunsreedharan.org/facebook-friends-ranking-score/)
 and bookmark the given link.
